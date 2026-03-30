@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Introducción a Flask</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Flask Panel</h1>
+		</header>
+
+		<section>
+			<div>
+				<h2>Tasks</h2>
+				<button type="button">Refresh</button>
+			</div>
+
+			<form>
+				<label>
+					Content
+					<input id="taskContent" name="content" type="text" required placeholder="Write a task">
+				</label>
+				<button type="submit">Add Task</button>
+			</form>
+
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<th>API ID</th>
+							<th>Content</th>
+							<th>Done</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<div>
+				<h2>Users</h2>
+				<button type="button">Refresh</button>
+			</div>
+
+			<form>
+				<input id="userId" name="id" type="hidden">
+
+				<label>
+					Name
+					<input id="userName" name="name" type="text" required placeholder="Jhordan">
+				</label>
+
+				<label>
+					Lastname
+					<input id="userLastname" name="lastname" type="text" required placeholder="Huamani">
+				</label>
+
+				<label>
+					City
+					<input id="userCity" name="city" type="text" required placeholder="Arequipa">
+				</label>
+
+				<label>
+					Country
+					<input id="userCountry" name="country" type="text" required placeholder="Peru">
+				</label>
+
+				<label>
+					Postal Code
+					<input id="userCode" name="code" type="text" required placeholder="04000">
+				</label>
+
+				<div>
+					<button type="submit">Create User</button>
+					<button type="button">Clear</button>
+				</div>
+			</form>
+
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Lastname</th>
+							<th>City</th>
+							<th>Country</th>
+							<th>Code</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+
+	<div></div>
+
+	<script src="script.js"></script>
+</body>
+</html>

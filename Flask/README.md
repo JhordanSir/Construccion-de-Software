@@ -1,17 +1,17 @@
 # Guia de Instalación
 
 ## Python (app.py)
-1. Create a new environment:  
+1. Crear un nuevo environment:  
 ```bash
 conda create --name flask_env python=3.11
 ```
 
-2. Activate environment:  
+2. Activar environment:  
 ```bash
 conda activate flask_env
 ```
 
-3. Install Flask:  
+3. Instalar Flask:  
 ```bash
 pip install flask
 ```
@@ -53,3 +53,31 @@ python app.py
 2. En Postman, abre la colección importada.
 3. Ejecuta primero `POST /tasks` o `POST /users` para crear datos.
 4. Luego ejecuta `GET`, `PUT` y `DELETE` según necesites.
+
+## Frontend
+
+### Acceder al Panel
+1. Asegúrate de tener el servidor Flask corriendo (`python app.py`).
+2. Abre tu navegador web.
+3. Ingresa al  URL:
+   ```
+   http://127.0.0.1:5000/ui
+   ```
+
+### Uso del Panel (UI)
+El panel cuenta con dos secciones principales totalmente funcionales que se comunican con los endpoints de Flask:
+
+#### 1. Gestión de Tareas (Tasks)
+- **Ver tareas:** La lista se carga automáticamente. Puedes refrescarla usando el botón **Refresh**.
+- **Añadir tarea:** Escribe el contenido en el campo de texto y haz clic en **Add Task**.
+- **Completar/Deshacer:** Usa el botón de acción en la tabla para marcar la tarea como terminada o deshacerla.
+- **Eliminar:** Usa el botón rojo **Eliminar** para borrar la tarea definitivamente.
+
+#### 2. Gestión de Usuarios (Users)
+- **Ver usuarios:** La tabla inferior muestra todos los usuarios.
+- **Crear usuario:** Completa el formulario con los datos requeridos (Name, Lastname, City, Country, Postal Code) y haz clic en **Create User**.
+- **Editar usuario:** Haz clic en **Editar** en la tabla. El formulario se llenará con los datos del usuario. Realiza los cambios y haz clic en **Actualizar Usuario**.
+- **Limpiar formulario:** Usa el botón **Clear** para vaciar el formulario y volver al modo de creación.
+- **Eliminar usuario:** Haz clic en el botón rojo **Eliminar** en la tabla para borrar un registro.
+
+

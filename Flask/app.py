@@ -1,7 +1,10 @@
-from flask import Flask, request, jsonify
+import os
+
+from flask import Flask, request, jsonify, send_from_directory
 
 # Create Flask app
 app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/")
 def home():
@@ -19,10 +22,21 @@ def hello(name):
 def json_response():
     return {"status": "success", "message": "This is JSON!"}
 
+@app.route("/ui")
+def ui():
+    return send_from_directory(BASE_DIR, "index.html")
+
+@app.route("/style.css")
+def style_file():
+    return send_from_directory(BASE_DIR, "style.css")
+
+@app.route("/script.js")
+def script_file():
+    return send_from_directory(BASE_DIR, "script.js")
+
 tasks = []
 users = []
 next_user_id = 1
-
 
 def _is_valid_user_payload(data):
     if not data:
